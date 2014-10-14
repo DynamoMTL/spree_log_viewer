@@ -39,12 +39,7 @@
   $(".more_info").click(function() {
     var index = $(this).data('index');
 
-    $("#more_info_" + index).dialog({
-      draggable: false,
-      modal: true,
-      position: ["center","center"],
-      width: 1020
-    })
+    $("#more_info_" + index).toggle();
     return false;
   });
 </script>
