@@ -16,7 +16,7 @@
   <dt>Mode</dt>
   <dd><%= response.try(:test?) ? "Test Mode" : "Production Mode"%></dd>
 </dl>
-  <%= link_to "More Info", '#', class: 'more_info', 'data-index' => index %>
+  <%= link_to "More Info", 'javascript:;', class: 'more_info', 'data-index' => index %>
 
   <div id="more_info_<%= index %>" style="display:none">
     <%= render(:partial => 'hash_table', :locals => {:hash => response.avs_result, :title => 'Address Verification (AVS)'}) if response.try(:avs_result) %>
